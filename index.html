@@ -57,10 +57,10 @@
 
  <button v-on:click='active'>開く</button>
 <div :class="tive" v-on:click='mask'>
-  <div class="content" >
+</div>
+  <div class="content" :class='tive' >
     <p>モーダルウィンドウ</p>
     <button v-on:click='mask'>閉じる</button>
-  </div>
 </div>
 </div>
 <script>
@@ -92,12 +92,21 @@
     right: 0;
     left: 0;
   }
-  .active div {
+  .content  {
     background-color: whitesmoke;
+
     text-align: center;
     width: 50%;
-    margin: 30% auto;
+   position: absolute;
+   top: 30px;
+   left: 0;
+   right: 0;
+   height: 200px;
+    margin:auto;
+    z-index: 2;
+   line-height: 100px;
   } 
+
   </style>
   </body>
   </html>
